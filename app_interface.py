@@ -4,7 +4,7 @@ import gradio as gr
 from model_handler import load_llama_model, generate_text_with_llama
 
 # Load the Llama 2 model
-model_path = "path/to/your/llama/model"  # Update this path to your actual model location
+model_path = "llama-2-7b-chat.ggmlv3.q8_0.bin"  # Update this path to your actual model location
 llama_model = load_llama_model(model_path)
 
 def gradio_interface(prompt):

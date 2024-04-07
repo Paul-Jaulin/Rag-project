@@ -16,6 +16,6 @@ def generate_text_with_llama(prompt, model):
 
 if __name__ == "__main__":
     # Example usage
-    model_path = "path/to/your/llama/model"  # Update this path to your model's location
+    model_path = "llama-2-7b-chat.ggmlv3.q8_0.bin"  # Update this path to your model's location
     llama_model = load_llama_model(model_path)
     print(generate_text_with_llama("Hello, world!", llama_model))
