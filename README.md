@@ -42,7 +42,3 @@ python app_interface.py
 ```
 
 4. A Gradio interface will launch in your default web browser. Enter a prompt into the text box and press submit to generate text using the Llama 2 model.
-
-## Notes
-
-- The current setup assumes the Llama 2 model is in a format compatible with the Hugging Face Transformers library. Direct usage of `.ggmlv3` files in Python is not supported without additional custom implementation.
