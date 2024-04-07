@@ -20,7 +20,7 @@ This project demonstrates how to integrate a Llama 2 model for text generation a
 2. Install required Python libraries by running:
 
 ```bash
-pip install gradio transformers
+pip install gradio transformers langchain sentence_transformers faiss-cpu ctransformers
 ```
 
 3. Clone the repository or download the provided Python scripts (`model_handler.py` and `app_interface.py`) into your working directory.

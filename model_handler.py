@@ -1,5 +1,3 @@
-# Code in model_handler.py:
-
 import gradio as gr
 from transformers import pipeline
 
