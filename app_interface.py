@@ -77,7 +77,6 @@ def interact_with_documents(prompt, model_name):
     return response
 
 
--------------------------------------------------------------------------------
 
 # Define Gradio interface
 gr.Interface(fn=interact_with_documents, inputs=["text", gr.inputs.Dropdown(["RAG", "SentenceTransformers"])],
