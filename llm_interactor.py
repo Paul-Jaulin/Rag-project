@@ -1,9 +1,16 @@
-# Placeholder for LLM interaction
-def generate_response(prompt, context):
+from transformers import pipeline
+
+# Initialize a QnA pipeline with a pre-trained model
+qna_pipeline = pipeline("question-answering", model="distilbert-base-cased-distilled-squad")
+
+def generate_response(question, context_text):
     """
-    Generates a response using the LLM based on the given prompt and context.
+    Generates an answer using a QnA model based on the question and the provided textual context.
     """
-    # This function needs to be implemented based on the specifics of the LLM you are using.
-    # For GPT-3, you would use OpenAI's API here.
-    # For demonstration purposes, let's just return the prompt and the first 100 characters of context.
-    return "Prompt: {}\nContext (first 100 chars): {}".format(prompt, context[:100])
+    # Generate an answer using the QnA pipeline
+    answer = qna_pipeline(question=question, context=context_text)
+    return answer['answer']
+
+# Note: `context_text` should be the textual content you've deemed most relevant for the question. This could be
+# the content of the most relevant chunk determined through some heuristic based on the encodings or simply
+# using the text of a selected document chunk.

@@ -8,6 +8,5 @@ def read_pdf(pdf_path):
     text = ""
     for page in doc:
         text += page.get_text()
-    print(text)
     return text
     
