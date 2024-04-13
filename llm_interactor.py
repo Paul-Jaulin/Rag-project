@@ -1,16 +1,21 @@
 from transformers import pipeline
 
-# Initialize a QnA pipeline with a pre-trained model
-qna_pipeline = pipeline("question-answering", model="distilbert-base-cased-distilled-squad")
+# Initialize the QnA pipeline with a specific model
+qna_pipeline = pipeline("question-answering", model="google/t5-efficient-mini")
 
-def generate_response(question, context_text):
+def generate_response(question, context_chunks):
     """
-    Generates an answer using a QnA model based on the question and the provided textual context.
+    Generates a response using a Q&A model based on the question and the provided context chunks.
     """
-    # Generate an answer using the QnA pipeline
-    answer = qna_pipeline(question=question, context=context_text)
+    # Combine the context_chunks into a single context string.
+    # Note: Depending on your model's max input size, you may need to truncate or select relevant chunks.
+    context = " ".join(context_chunks)
+    
+    # Use the first 512 tokens from the context to avoid model input size limit.
+    # Adjust this slicing as needed based on the model's limitations.
+    context = context[:512*2]
+
+    # Generate an answer using the Q&A pipeline
+    answer = qna_pipeline(question=question, context=context)
+    print(answer['answer'])
     return answer['answer']
-
-# Note: `context_text` should be the textual content you've deemed most relevant for the question. This could be
-# the content of the most relevant chunk determined through some heuristic based on the encodings or simply
-# using the text of a selected document chunk.
