@@ -10,7 +10,7 @@ def load_pdf(file_path):
         text += page.extract_text() + "\n"  # Extract text from each page
     return text
 
-def chunk_text(text, chunk_size=2048, overlap=0):
+def chunk_text(text, chunk_size=1024, overlap=0):
     """
     Chunks the text into segments.
     """

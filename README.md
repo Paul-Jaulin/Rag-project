@@ -1,18 +1,25 @@
+Here is a README file customized for your project, which demonstrates how to integrate multiple small NLP models from Hugging Face with a Gradio interface. This documentation will guide users through setting up the project, choosing models, and interacting with the system.
 
-# Llama 2 Model Integration and Gradio Interface
+---
 
-This project demonstrates how to integrate a Llama 2 model for text generation and create a Gradio interface for easy interaction.
+# Document RAG System with Dynamic Model Selection
+
+This project showcases the integration of various small NLP models for generating responses from text extracted from PDF documents using a Gradio interface for easy interaction. Users can select different models and documents to generate context-specific responses.
 
 ## Project Structure
 
-- `model_handler.py`: Handles the loading of the Llama 2 model and text generation.
-- `app_interface.py`: Defines the Gradio interface and integrates the model handling for user interaction.
+- `pdf_processor.py`: Handles the loading and text extraction of PDF files.
+- `embedding_processor.py`: Manages the embedding of text chunks and retrieval of relevant contexts.
+- `response_generator.py`: Facilitates the generation of responses based on the selected model and context.
+- `app_interface.py`: Defines and manages the Gradio interface, integrating all components for user interaction.
 
 ## Pre-requisites
 
 - Python 3.7 or newer.
 - Gradio
 - Transformers library by Hugging Face.
+- Sentence Transformers for embeddings.
+- PyPDF2 for PDF processing.
 
 ## Setup Instructions
 
@@ -20,25 +27,39 @@ This project demonstrates how to integrate a Llama 2 model for text generation a
 2. Install required Python libraries by running:
 
 ```bash
-pip install gradio transformers langchain sentence_transformers faiss-cpu ctransformers
+pip install gradio transformers sentence_transformers PyPDF2
 ```
 
-3. Clone the repository or download the provided Python scripts (`model_handler.py` and `app_interface.py`) into your working directory.
+3. Clone the repository or download the provided Python scripts into your working directory.
 
-## Downloading the Llama 2 Model
+## Model Selection
 
-To download the Llama 2 model used in this project, follow this link: [Download Llama 2 Model](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/resolve/main/llama-2-7b-chat.ggmlv3.q8_0.bin)
+This project uses multiple small models from Hugging Face's Model Hub, suitable for real-time applications. Here are the models integrated into the project:
 
-Ensure to replace `"path/to/your/llama/model"` in the Python scripts with the actual path where your downloaded model is stored.
+- `distilbert-base-uncased`
+- `google/electra-small-discriminator`
+- `sshleifer/tiny-gpt2`
+- `prajjwal1/bert-small`
+- `microsoft/MiniLM-L12-H384-uncased`
+
+Ensure to replace the model selection in `app_interface.py` with any of the models listed as needed.
 
 ## Running the Project
 
-1. Update `model_handler.py` and `app_interface.py` with the correct path to your Llama 2 model.
-2. Ensure both Python scripts are in the same directory.
-3. Run the Gradio interface script:
+1. Ensure all Python scripts (`pdf_processor.py`, `embedding_processor.py`, `response_generator.py`, `app_interface.py`) are in the same directory.
+2. Run the Gradio interface script:
 
 ```bash
 python app_interface.py
 ```
 
-4. A Gradio interface will launch in your default web browser. Enter a prompt into the text box and press submit to generate text using the Llama 2 model.
+3. The Gradio interface will launch in your default web browser. You can select a model, choose a PDF document from the dataset, and enter a question. The system processes the document, retrieves the context, and generates a response based on the chosen model.
+
+## Example Usage
+
+- Choose a model from the dropdown menu.
+- Select a PDF file from the dataset.
+- Enter a question related to the PDF content.
+- Press submit to see the generated response and the context used for generation.
+
+For any questions regarding the setup or operation of this project, refer to the detailed comments in the code or contact the repository maintainer.
