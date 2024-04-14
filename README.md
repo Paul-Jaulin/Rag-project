@@ -1,7 +1,3 @@
-Here is a README file customized for your project, which demonstrates how to integrate multiple small NLP models from Hugging Face with a Gradio interface. This documentation will guide users through setting up the project, choosing models, and interacting with the system.
-
----
-
 # Document RAG System with Dynamic Model Selection
 
 This project showcases the integration of various small NLP models for generating responses from text extracted from PDF documents using a Gradio interface for easy interaction. Users can select different models and documents to generate context-specific responses.
