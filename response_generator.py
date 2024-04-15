@@ -1,5 +1,5 @@
 from transformers import pipeline
-from old_model_loader import load_model
+from model_loader import load_model
 
 def generate_response(model_name, prompt, context):
     tokenizer, model = load_model(model_name)
