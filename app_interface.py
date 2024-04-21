@@ -22,7 +22,7 @@ demo = gr.Interface(
         gr.Dropdown(label="Choose Model", choices=model_options),
         gr.Dropdown(label="Select PDF Document", choices=os.listdir(dataset_path)),
         gr.Textbox(label="Enter your question"),
-        gr.Slider(label="Chunk Size", minimum=100, maximum=1000, step=50, value=500),
+        gr.Slider(label="Chunk Size", minimum=128, maximum=1024, step=128, value=512),
         gr.Slider(label="Overlap Size", minimum=0, maximum=500, step=10, value=100)
     ],
     outputs=[
