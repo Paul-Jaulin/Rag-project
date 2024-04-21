@@ -10,7 +10,7 @@ def generate_response(model_name, prompt, context):
 
 
     # Set dynamic max_length based on desired output length
-    max_length = input_ids.shape[1] + 50  # Allows 30 new tokens beyond the input
+    max_length = input_ids.shape[1] + 50
     responses = text_gen_pipeline(input_text, max_length=max_length, num_return_sequences=1)
 
     final_text = ' '.join(responses[0]['generated_text'].split())

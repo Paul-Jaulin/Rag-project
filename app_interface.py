@@ -10,7 +10,7 @@ model_options = ["gpt2", "distilgpt2", "sshleifer/tiny-gpt2", "openai-gpt", "mic
 def process_document(model_name, filename, question, chunk_size, overlap_size):
     file_path = os.path.join(dataset_path, filename)
     text = load_pdf(file_path)
-    chunks = chunk_text(text, chunk_size, overlap_size)  # Assuming chunk_text can handle these params
+    chunks = chunk_text(text, chunk_size, overlap_size)
     embeddings = embed_chunks(chunks)
     context, context_idx = rag_retrieval(question, embeddings, chunks)
     response = generate_response(model_name, question, context)
