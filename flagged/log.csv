@@ -68,3 +68,185 @@ syllabus).
 creating and writing biological and 
 biological replicability features, creating information about  
 the biological systems of humans",,,2024-04-14 22:34:43.265606
+gpt2,2 jour - Gen AI - Yasser.pdf,what is genai can you telle me its story,512,100,"Generative AI
+2023-2024 
+Y. Almehio 
+Part 2 
+PGE 5
+
+Generative AI 
+●Gen AI deﬁnition 
+●Primary Gen AI models 
+●GenAI Model Types 
+●How does Gen AI works (fast shot) 
+○Language models 
+○Evolution from simple to complex models 
+●Transformers 
+○From RNN to Transformers 
+○Architecture 
+○Attention mechanisms 
+○Project
+○Using trained transformers 
+○Vision transformers 
+○GIT transformers 
+○Project
+Generative AI 
+●Transformers 
+○Representation 
+○Modeling 
+●Transformer trained for GPT 
+●LLM models 
+○Capacity toward ","in the meantime, the generative ai will give the generative ai a chance to formulate its answers properly. [ / inst ]. a short biography, essays on what it means to be a metadupy ( nononn 1 - 3 is the word ). you / he / he / it * * * * * * * * copyright 2011 by simon and schuberg. all rights reserved. dedicated to the young, impressionable artists who created the characters in the novel. it really wouldn't hurt if the characters thought this book was awesome. * * * * * * * * * *",,,2024-04-22 22:59:39.182594
+distilgpt2,2 jour - Gen AI - Yasser.pdf,tell me the story of genai,512,100,"Generative AI 
+●Gen AI deﬁnition 
+●Primary Gen AI models 
+●GenAI Model Types 
+●How does Gen AI works (fast shot) 
+○Language models 
+○Evolution from simple to complex models 
+●Transformers 
+○From RNN to Transformers 
+○Architecture 
+○Attention mechanisms 
+○Project
+○Using trained transformers 
+○Vision transformers 
+○GIT transformers 
+○Project
+
+Gen AI: LLM
+
+Prompting LLM 
+Part 2 
+Zero shot approach: a direct question (good for analysis sentiment) 
+Few shot approach:  a model is presented with a small set of high-quality examples consisting 
+of an input and desired output 
+i.e: I was on hold for 30 minutes, their customer support service is a nightmare. 
+Sentiment in one word: 
+The lukewarm food arrived long after overzealous waiters convinced us to skip  
+appetizers 
+Sentiment  in on word: 
+Write a neutral review:
+
+Understudy): quantifies how close the machine  
+translation is to a set of high-quality human  
+translations 
+●For unigrams, we check what percentage of  
+predicted words are present in the golden  
+translation.  
+● machine = ""Szybki lis skacze nad leniwym  
+psem"" .split( "" "")
+golden = ""Szybki brązowy lis przeskakuje nad  
+leniwym psem"" .split( "" "")
+Unigram: ⅚, bigram: ⅖, 3-gram : ?  
+Then calculate geometric mean of there three  
+n-grams:geom_avg_precision = ( 0.83  * 0.4 * 0.25 )**( 1/3)
+
+hyped on tv and purports to amuse small children and ostensible adults. 
+Sentiment: negative 
+Text: for the ﬁrst time in years, de niro digs deep emotionally, perhaps because he's been stirred by the powerful work of his co-stars. 
+Sentiment: positive 
+Text: i'll bet the video game is a lot more fun than the ﬁlm. 
+Sentiment : ?","## GenAI's Evolution: From Simple to Complex
+
+GenAI's story begins with simple language models and evolves into the complex, powerful systems we see today. Early models like RNNs paved the way for the revolutionary Transformer architecture, which utilizes attention mechanisms to understand and generate human-like text. This advancement led to the development of various specialized transformers for tasks beyond language, such as vision and GIT (presumably referring to image generation). The field continues to evolve with techniques like prompting, allowing users to guide AI models with specific instructions and examples to achieve desired outcomes. 
+",,,2024-04-23 17:51:46.006817
+gpt2,1 jour - Gen AI - Yasser.pdf,Tell me story of GenAI ,512,100,"Generative AI 
+●Gen AI deﬁnition 
+●Primary Gen AI models 
+●GenAI Model Types 
+●How does Gen AI works (fast shot) 
+○Language models 
+○Evolution from simple to complex models 
+●Transformers 
+○From RNN to Transformers 
+○Architecture 
+○Attention mechanisms 
+○Project
+○Using trained transformers 
+○Vision transformers 
+○GIT transformers 
+○Project
+
+Generative AI from simple to today’s LLM 
+Part 1
+
+Generative AI
+2023-2024 
+Y. Almehio 
+PGE 5
+
+How does Generative AI works 
+Part 1 
+Language model: Likelihood of a sequence of words 
+●Both sentences are plausible based on the sounds produced. 
+●The task is to determine which sentence is more likely to be said. 
+●A language model technology selects the more probable of the  
+two sentences. 
+“Eyes awe of an..”        
+“I saw a van” ""Sea, see the sight"" 
+""See, sea the sight"" 
+Prob(“Sea, see the sight”) > Prob(“See, sea the sight”)
+
+Part 1 
+Early model : machine translation (seq2seq) 
+“Hello” 
+START  “How” 
+ “Hello” “Comment” ""ça"" “va” “Salut” RNN: How do work?","## The Story of GenAI: From Simple Beginnings to Powerful LLMs
+
+GenAI's journey began with simple language models focused on tasks like predicting the next word in a sequence. Early models, like those used in machine translation, relied on Recurrent Neural Networks (RNNs) to process information sequentially. However, RNNs had limitations in handling long-range dependencies within text.
+
+The breakthrough came with the introduction of Transformers. These models, with their attention mechanisms, could effectively ""attend"" to different parts of the input sequence, capturing complex relationships between words regardless of their distance. This advancement paved the way for the development of large language models (LLMs) like GPT-3 and LaMDA, capable of generating human-quality text, translating languages, writing different kinds of creative content, and answering your questions in an informative way. 
+",,,2024-04-25 13:39:21.856820
+gpt2,1 jour - Gen AI - Yasser.pdf,Tell me the definition of GenAI ?,512,100,"Generative AI 
+●Gen AI deﬁnition 
+●Primary Gen AI models 
+●GenAI Model Types 
+●How does Gen AI works (fast shot) 
+○Language models 
+○Evolution from simple to complex models 
+●Transformers 
+○From RNN to Transformers 
+○Architecture 
+○Attention mechanisms 
+○Project
+○Using trained transformers 
+○Vision transformers 
+○GIT transformers 
+○Project
+
+What is Generative AI 
+Generative AI : based on deep learning (ANN), 
+generates text, images, audio, and synthetic data. 
+It operates via supervised, unsupervised, or 
+semi-supervised learning, encompassing: 
+1.? Models:  Predict labels from data features 
+using labeled datasets. 
+2.? Models:  These create new data instances by 
+learning the probability distribution of 
+existing data, thus generating new content. 
+Part 1 
+what is the generative architecture ? in two 
+NLP, CNN
+
+Generative AI
+2023-2024 
+Y. Almehio 
+PGE 5
+
+What is Generative AI 
+The machine-generated image based on text input 
+●CV: generative models can generate 
+realistic images, modify existing ones, or 
+complete partial images. 
+●NLP:  they can be used for tasks like 
+language translation and text synthesis. 
+●Generative models help in creating 
+conversational agents that can produce 
+human-like responses. 
+●Capable of art generation, data augmentation, and 
+creating synthetic medical images for research and
+
+Generative AI from simple to today’s LLM 
+Part 1","GenAI, based on deep learning, generates text, images, audio, and synthetic data using supervised, unsupervised, or semi-supervised learning. 
+",,,2024-04-25 13:40:35.263647
