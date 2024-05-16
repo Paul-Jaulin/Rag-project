@@ -8,7 +8,6 @@ from langchain.prompts import PromptTemplate
 import gradio as gr
 import torch.nn.functional as F
 
-
 # Mapping of model sizes and names to their corresponding Hugging Face model identifiers
 model_names = {
     "Small - Google Flan-T5 (80M parameters)": "google/flan-t5-small",  # Flan-T5 Small with 80 million parameters
@@ -33,21 +32,19 @@ revision = None
 
 # Set generation parameters
 generate_kwargs = {
-    "max_new_tokens": 1048,  # Specify the maximum number of tokens to generate
-    "max_length": 1048,
+    "max_new_tokens": 300,  # Specify the maximum number of tokens to generate
     "num_return_sequences": 1
 }
 
 def process_document(model_size, filename, question, chunk_size, overlap_size):
     # Initialize the model and tokenizer based on the selected model size
     model_name = model_names[model_size]
-    tokenizer = AutoTokenizer.from_pretrained(model_name,trust_remote_code=True)
-    model = AutoModelForSeq2SeqLM.from_pretrained(model_name,trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_name, trust_remote_code=True)
     llm = pipeline("text2text-generation", model=model, tokenizer=tokenizer)
 
     # Load the sentence embedding model
-    #embedding_model = SentenceTransformer("avsolatorio/GIST-small-Embedding-v0", revision=revision)
-    embeddings = HuggingFaceEmbeddings(model_name = "avsolatorio/GIST-small-Embedding-v0")
+    embeddings = HuggingFaceEmbeddings(model_name="avsolatorio/GIST-small-Embedding-v0")
 
     # Process each file or all files if 'All Documents' is selected
     if filename == "All Documents":
@@ -72,6 +69,10 @@ def process_document(model_size, filename, question, chunk_size, overlap_size):
 
     # Combine contexts from all processed documents
     combined_context = "\n\n".join(contexts)
+
+    # Ensure the input sequence length does not exceed the model's maximum length
+    input_tokens = tokenizer(combined_context + question, truncation=True, max_length=512, return_tensors="pt")
+
     final_prompt = RAG_CHAIN_PROMPT.format(question=question, context=combined_context)
     response = llm(final_prompt, **generate_kwargs)[0]["generated_text"]
     return combined_context, response
