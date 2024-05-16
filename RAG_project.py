@@ -32,7 +32,7 @@ revision = None
 
 # Set generation parameters
 generate_kwargs = {
-    "max_new_tokens": 300,  # Specify the maximum number of tokens to generate
+    "max_new_tokens": 400,  # Specify the maximum number of tokens to generate
     "num_return_sequences": 1
 }
 

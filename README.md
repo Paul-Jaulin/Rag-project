@@ -1,6 +1,6 @@
 # Document RAG System with Dynamic Model Selection
 
-This project showcases the integration of various small NLP models from Hugging Face for generating responses from text extracted from PDF documents using a Gradio interface for easy interaction. Users can select different models and documents to generate context-specific responses.
+This project showcases the integration of various small NLP models from Hugging Face for generating responses from text extracted from PDF documents using a Gradio interface for easy interaction. Users can select different models and documents to generate context-specific responses. You can find in the `flagged` folder examples of inferences using Google Premium llms (textembedding-gecko@001 and gemini-1.5-pro-preview-0409).
 
 ## Project Structure
 

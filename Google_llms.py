@@ -14,8 +14,6 @@ from google.cloud import aiplatform
 
 PROJECT_ID = "XXXX"
 print(PROJECT_ID)
-# https://github.com/googleapis/python-aiplatform/issues/2557#issuecomment-1709284744
-
 
 
 creds, _ = google.auth.default(quota_project_id=PROJECT_ID)
